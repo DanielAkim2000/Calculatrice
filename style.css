@@ -10,8 +10,8 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     border-radius: 50%;
     text-align: center;
 }
@@ -28,7 +28,7 @@ button:hover {
     height: auto;
     border-radius: 10px;
     background-color: black;
-    width: 200px;
+    width: 300px;
     padding: 5px;
     border: 1px solid #383838;
 }
@@ -50,6 +50,6 @@ button:hover {
     border: none;
     background: none;
     text-align: right;
-    font-size: large;
+    font-size: 3em;
     color: white;
 }
