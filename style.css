@@ -14,6 +14,7 @@ button {
     height: 5em;
     border-radius: 50%;
     text-align: center;
+    font-weight: 800;
 }
 
 button:hover {
@@ -30,7 +31,9 @@ button:hover {
     background-color: black;
     width: 300px;
     padding: 5px;
-    border: 1px solid #383838;
+    padding-bottom: 10px;
+    border: 2px solid #383838;
+    box-shadow: 0 0 10px #383838;
 }
 
 .ligne {
@@ -52,4 +55,5 @@ button:hover {
     text-align: right;
     font-size: 3em;
     color: white;
+    text-decoration-color: white;
 }
