@@ -37,12 +37,16 @@ operators.forEach((operator) => {
             case "/":
                 result.value += "/";
                 break;
+            case "%":
+                result.value += "%";
+                break;
             case "=":
                 if (
                     result.value[result.value.length - 1] == "+" ||
                     result.value[result.value.length - 1] == "-" ||
                     result.value[result.value.length - 1] == "*" ||
-                    result.value[result.value.length - 1] == "/"
+                    result.value[result.value.length - 1] == "/" ||
+                    result.value[result.value.length - 1] == "%"
                 ) {
                     result.value = result.value.slice(0, -1);
                 }

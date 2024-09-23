@@ -44,7 +44,7 @@ button:hover {
     margin-top: 3px;
 }
 
-.operator {
+.operator:not(#reste) {
     background-color: #ff8c00;
     color: white;
 }
@@ -55,7 +55,7 @@ button:hover {
     appearance: none;
     width: 100%;
     border: none;
-    background: black;
+    background-color: black;
     text-align: right;
     font-size: 3em;
     color: white;
