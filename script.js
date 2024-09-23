@@ -8,7 +8,7 @@ let changesigne = document.querySelector("#changesigne");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
-        if (result.value == 0) {
+        if (result.value == 0 && result.value.length == 1) {
             result.value = "";
         }
         if (result.value == "Math Error") {
