@@ -4,6 +4,7 @@ let clear = document.querySelector("#clear");
 let operators = document.querySelectorAll(".operator");
 let equal = document.querySelector("#equal");
 let virgule = document.querySelector(".virgule");
+let changesigne = document.querySelector("#changesigne");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
@@ -60,4 +61,12 @@ clear.addEventListener("click", () => {
 
 virgule.addEventListener("click", () => {
     result.value += ".";
+});
+
+changesigne.addEventListener("click", () => {
+    if (result.value[0] == "-") {
+        result.value = result.value.slice(1);
+    } else {
+        result.value = "-" + result.value;
+    }
 });
