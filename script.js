@@ -37,6 +37,14 @@ operators.forEach((operator) => {
                 result.value += "/";
                 break;
             case "=":
+                if (
+                    result.value[result.value.length - 1] == "+" ||
+                    result.value[result.value.length - 1] == "-" ||
+                    result.value[result.value.length - 1] == "*" ||
+                    result.value[result.value.length - 1] == "/"
+                ) {
+                    result.value = result.value.slice(0, -1);
+                }
                 result.value = eval(result.value);
                 if (result.value == "Infinity") {
                     result.value = "Math Error";
