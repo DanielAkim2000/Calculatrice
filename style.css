@@ -49,12 +49,6 @@ button:hover {
     color: white;
 }
 
-#reste {
-    background-color: #383838;
-    color: white;
-    border-radius: 10px;
-}
-
 #result {
     -webkit-appearance: none;
     -moz-appearance: none;
