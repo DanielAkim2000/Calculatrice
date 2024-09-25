@@ -8,51 +8,51 @@ let changesigne = document.querySelector("#changesigne");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
-        if (result.value == 0 && result.value.length == 1) {
-            result.value = "";
+        if (result.textContent == 0 && result.textContent.length == 1) {
+            result.textContent = "";
         }
-        if (result.value == "Math Error") {
-            result.value = "";
+        if (result.textContent == "Math Error") {
+            result.textContent = "";
         }
-        result.value += event.target.textContent;
+        result.textContent += event.target.textContent;
     });
 });
 
 clear.addEventListener("click", () => {
-    result.value = 0;
+    result.textContent = 0;
 });
 
 operators.forEach((operator) => {
     operator.addEventListener("click", (event) => {
         switch (event.target.textContent) {
             case "+":
-                result.value += "+";
+                result.textContent += "+";
                 break;
             case "-":
-                result.value += "-";
+                result.textContent += "-";
                 break;
             case "X":
-                result.value += "*";
+                result.textContent += "*";
                 break;
             case "/":
-                result.value += "/";
+                result.textContent += "/";
                 break;
             case "%":
-                result.value += "%";
+                result.textContent += "%";
                 break;
             case "=":
                 if (
-                    result.value[result.value.length - 1] == "+" ||
-                    result.value[result.value.length - 1] == "-" ||
-                    result.value[result.value.length - 1] == "*" ||
-                    result.value[result.value.length - 1] == "/" ||
-                    result.value[result.value.length - 1] == "%"
+                    result.textContent[result.textContent.length - 1] == "+" ||
+                    result.textContent[result.textContent.length - 1] == "-" ||
+                    result.textContent[result.textContent.length - 1] == "*" ||
+                    result.textContent[result.textContent.length - 1] == "/" ||
+                    result.textContent[result.textContent.length - 1] == "%"
                 ) {
-                    result.value = result.value.slice(0, -1);
+                    result.textContent = result.textContent.slice(0, -1);
                 }
-                result.value = eval(result.value);
-                if (result.value == "Infinity") {
-                    result.value = "Math Error";
+                result.textContent = eval(result.textContent);
+                if (result.textContent == "Infinity") {
+                    result.textContent = "Math Error";
                 }
                 break;
         }
@@ -60,17 +60,17 @@ operators.forEach((operator) => {
 });
 
 clear.addEventListener("click", () => {
-    result.value = 0;
+    result.textContent = 0;
 });
 
 virgule.addEventListener("click", () => {
-    result.value += ".";
+    result.textContent += ".";
 });
 
 changesigne.addEventListener("click", () => {
-    if (result.value[0] == "-") {
-        result.value = result.value.slice(1);
+    if (result.textContent[0] == "-") {
+        result.textContent = result.textContent.slice(1);
     } else {
-        result.value = "-" + result.value;
+        result.textContent = "-" + result.textContent;
     }
 });
