@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
+    font-family: "Inter", sans-serif;
 }
 
 button {
@@ -66,4 +67,8 @@ button:hover {
 
 #result:disabled {
     color: #ffffff;
+}
+
+.top {
+    background-color: rgb(170, 170, 170);
 }
